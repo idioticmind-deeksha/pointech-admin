@@ -1,0 +1,8 @@
+@use '../../assets/theme/_var.scss' as *;
+.admin_settings {
+    &_stats {
+        &:before {
+            filter: blur(8rem);
+        }
+    }
+}

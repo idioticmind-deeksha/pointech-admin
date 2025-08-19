@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+$basefont: "Montserrat", serif;
+$primaryclr: #00D4FF;
+$secondryclr: #BF00FF;
+$secondryclrADD8E6: #ADD8E6;
+$white: #fff;
+$black: #000;
+$textclr: #D3D3D3;
+$scrollbarclr:#8d8d8d;
+$borderclr:#D9E8E0;
+$borderclr2: #272B40;
+$lightgray: #D3D3D3;
+$red: #f00;
+$prefilledclr: #F7FCFA;
+$disabledclr: #E6EBE9;
+$inputbg: #1a1c28;
+$grayD9D9D9:#D9D9D9;
+$whiteEAEAEA:#EAEAEA;
+$whiteB0B0B0: #B0B0B0;
+$whiteD2D8DA: #D2D8DA;
+$green: #39FF14;
+$navyblue: #1A1F3A;
+$yellowclr: #FFD700; 
+$orange: #FF9500;
+$redFF4500: #FF4500;
+$whiteF5F5F5: #F5F5F5;
+$darkblueclr: #242424;
+$lightblueclr: #87ceeb;
+$purpleclr: #8a2be2;
+$blueclr00dfff: #00dfff;
+$blueclr0012ff: #0012ff;
+$lightclrC0C0: #c0c0c0;
+$darkgreenclr2: #2e8b57;
+// extends
+%transition {
+    transition: .3s all ease-in-out;
+}
+@keyframes boxColor {
+    0% {
+      background: red;
+    }
+    50% {
+      background: green;
+    }
+    100% {
+      background: blue;
+    }
+  }

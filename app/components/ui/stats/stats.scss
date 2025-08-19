@@ -1,0 +1,176 @@
+@use '../../../assets/theme/_var.scss' as *;
+.stats {
+    .row {
+        // margin: 0 -1rem;
+        >div {
+            // padding: 0 1rem;
+            margin-bottom: 3rem;
+        }
+        @media (max-width:1199px) {
+            >div {
+                margin-bottom: 2rem;
+            }
+        }
+        @media (max-width:575px) {
+            >div {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    &_card {
+        & {
+            border-radius: 2rem;
+            border: 0.1rem solid rgba($primaryclr, 0.3);
+            background-color: $black;
+            padding: 2rem 2rem 2rem;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            &::before {
+                content: "";
+                position: absolute;
+                opacity: 1;
+                filter: blur(4.3rem);
+                z-index: -1;
+                top: 0;
+                left: 50%;
+                background: radial-gradient(222% 26% at -7% 37%, #40a8ff 0%, rgba(57, 255, 20, 0) 100%);
+                width: calc(100% + 8rem);
+                height: calc(100% - 1rem);
+                transform: translate(-50%, 0);
+                pointer-events: none;
+            }
+        }
+        &_content {
+            padding-left: 1.2rem;
+            strong {
+                font-weight: 500;
+                display: block;
+                padding-bottom: .5rem;
+            }
+            h4 {
+                font-weight: 600;
+                margin: 0;
+                color: $primaryclr;
+            }
+            .repeat_subtitle{
+                color: $primaryclr;
+            }
+            h6{
+                margin-bottom: 0.5rem;
+            }
+            &_right {
+                margin-left: auto;
+                padding-left: .5rem;
+                text-align: right;
+            }
+            a {
+                text-decoration: underline;
+            }
+            &_label {
+                color: $primaryclr;
+                padding: 0.8rem 1rem;
+                background: $green;
+                border-radius: 0.6rem;
+                margin-bottom: 0.5rem;
+                font-size: 1.4rem;
+                display: inline-block;
+            }
+        }
+        &_badge {
+            position: absolute;
+            right: 0;
+            top: 0;
+            white-space: nowrap;
+            background-color: $green;
+            color: $primaryclr;
+            padding: .6rem 1.6rem;
+            border-bottom-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            font-size: 1.4rem;
+            svg {
+                margin-right: .3rem;
+            }
+            strong {
+                font-weight: 600;
+            }
+            &.type_alert {
+                background-color: rgba($red, 16%);
+                color: $red;
+            }
+            @media (max-width:1679px) {
+                padding: 0.2rem 1rem;
+                font-size: 1.2rem;
+                line-height: 1.4;
+                svg {
+                    width: 1rem;
+                    height: 1rem;
+                }
+            }
+        }
+        &.repeated {
+            .stats {
+                &_card {
+                    &_content {
+                        strong {
+                            padding-bottom: 0;
+                            &:nth-of-type(2) {
+                                padding-top: .5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width:1679px) {
+            & {
+                padding: 2rem 1.5rem;
+            }
+            &_content {
+                h3 {
+                    font-size: 2.2rem;
+                }
+            }
+            &_icon {
+                svg {
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+        }
+        @media (max-width:1279px) {
+            & {
+                padding: 2rem 1.5rem;
+            }
+            &_content {
+                h3 {
+                    font-size: 1.8rem;
+                }
+                &_right {
+                    span {
+                        padding: 0.5rem;
+                        font-size: 1.2rem;
+                        svg {
+                            margin-right: .5rem;
+                            height: 1.4rem;
+                            width: 1.4rem;
+                        }
+                    }
+                }
+            }
+            &_icon {
+                svg {
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+        }
+    }
+    @media (max-width:1199px) {
+        padding-bottom: 1rem;
+    }
+    @media (max-width:575px) {
+        padding-bottom: 2rem;
+    }
+}

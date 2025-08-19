@@ -1,0 +1,35 @@
+@use '../../../assets/theme/_var.scss' as *;
+.common_bg {
+    position: relative;
+    padding-top: 12rem;
+    flex: 1 auto;
+    background: linear-gradient(179deg, #1A1F3A 1.75%, #000 80.15%);
+    z-index: 1;
+    overflow: hidden;
+    .common_shadow {
+        top: 15rem;
+        // margin-top: -5rem;
+        margin-left: -10rem;
+        &::before {
+            z-index: 1;
+        }
+        &.right {
+            margin-left: auto;
+            left: auto;
+            right: -10rem;
+            top: 0;
+            top: 10rem;
+            &:before {
+                top: auto;
+                bottom: 0;
+                z-index: 1;
+            }
+            &:after {
+                top: 0;
+                bottom: auto;
+                z-index: 2;
+                opacity: .4;
+            }
+        }
+    }
+}

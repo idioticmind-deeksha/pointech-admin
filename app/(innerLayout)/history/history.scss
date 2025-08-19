@@ -1,0 +1,59 @@
+@use "../../assets/theme/_var.scss" as *;
+.history {
+    &_container {
+        &_head {
+            border-radius: 2rem;
+            background: linear-gradient(180deg, rgba(10, 11, 24, 0.56) 0%, rgba(8, 11, 24, 0.8) 73.05%), linear-gradient(142deg, rgba(27, 51, 81, 0.3) 19.63%, rgba(155, 97, 149, 0.3) 83.01%);
+            box-shadow: 0 4rem 4rem 0 rgba(0, 0, 0, 0.25);
+            -webkit-backdrop-filter: blur(3rem);
+            backdrop-filter: blur(3rem);
+            padding: 2.4rem 2.4rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @media(max-width: 579px){
+                flex-direction: column;
+                align-items: start;
+                .history_export_btn{
+                    width: 100%;
+                }
+            }
+            &_item {
+                .nav-link {
+                    color: $white;
+                    background-color: transparent;
+                    margin-right: 1rem;
+                    border-radius: 0;
+                    font-weight: 500;
+                    padding-bottom: 1.5rem; 
+                    &.active {
+                        color: $primaryclr;
+                        background-color: transparent;
+                        border-bottom: 0.15rem solid $primaryclr;
+                    }
+                }
+
+            }
+        }
+        .transactions_table{
+            table {
+                tr {
+                    td {
+                        button {
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.wrap_btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row-reverse;
+    
+}

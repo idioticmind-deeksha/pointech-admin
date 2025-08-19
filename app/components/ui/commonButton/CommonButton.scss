@@ -1,0 +1,157 @@
+@use "../../../assets/theme/_var.scss" as *;
+.common_btn {
+  height: 4.6rem;
+  border-radius: 5rem;
+  outline: none;
+  background-color: $primaryclr;
+  color: $black;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  box-shadow: 0 0 2rem 0 rgba($white, 0.30);
+  @extend %transition;
+  &_icon {
+    margin-right: .8rem;
+    svg,
+    img {
+      max-width: 3.6rem;
+      @media (max-width:991px) {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+  }
+  &.full {
+    width: 100%;
+    max-width: 100%;
+  }
+  &.secondary_btn {
+    background-color: $secondryclr;
+    color: $black;
+  }
+  &.btn_yellow {
+    background-color: $yellowclr;
+    color: $black;
+  }
+  &.btn_blue {
+    background-color: transparent;
+    border: 0.1rem solid  $primaryclr;
+    color: $primaryclr;
+    &:hover {
+      background-color: $primaryclr;
+    color: $black;
+    }
+  }
+  &.btn_green {
+    background-color: $green;
+    color: $black;
+  }
+  &.btn_lightgreen {
+    background-color: $darkgreenclr2;
+    color: $black;
+  }
+  @media (max-width: 1679px) {
+    height: 4rem;
+    font-size: 1.4rem;
+  }
+  @media (max-width: 991px) {
+    padding: 1rem 1.5rem;
+  }
+  &.samll-btn {
+    font-size: 1.4rem;
+    font-weight: 600;
+    height: 3.6rem;
+    min-width: 5rem;
+    padding: 1rem 1.4rem;
+    border-radius: 1rem;
+  }
+  &:disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: .5;
+  }
+  &.full {
+    width: 100%;
+    max-width: 100%;
+  }
+  &.border-btn {
+    border: 1px solid $secondryclr;
+    color: $secondryclr;
+    background: transparent;
+    &:hover {
+      background-color: $secondryclr;
+      color: $white;
+    }
+  }
+  &.btn-secondry {
+    background-color: $navyblue;
+    color: $white;
+  }
+  &.border-btn-dark {
+    border: 1px solid $primaryclr;
+    color: $primaryclr;
+    background: transparent;
+    &:hover {
+      background-color: $primaryclr;
+      color: $white;
+    }
+  }
+  &.btn_unique {
+    padding: 0;
+    background-color: transparent;
+    font-size: 1.4rem;
+    border-radius: 0;
+    color: $white;
+    padding-bottom: .5rem;
+    box-shadow: none;
+    height: auto;
+    position: relative;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: .1rem;
+      width: 100%;
+      background-color: $green;
+      box-shadow: 0 .1rem .7rem 0 var(--neon-green-Color, $green);
+    }
+    &.secondry {
+      color: $primaryclr;
+      &:after {
+        background-color: $primaryclr;
+        box-shadow: 0 .1rem .7rem 0 $primaryclr;
+      }
+    }
+    &.red {
+      color: $redFF4500;
+      &:after {
+        background-color: $redFF4500;
+        box-shadow: 0 .1rem .7rem 0 $redFF4500;
+      }
+    }
+    &.orange {
+      color: $orange;
+      &:after {
+        background-color: $orange;
+        box-shadow: 0 .1rem .7rem 0 $orange;
+      }
+    }
+    &.green {
+      color: $green;
+      &:after {
+        background-color: $green;
+        box-shadow: 0 .1rem .7rem 0 $green;
+      }
+    }
+  }
+}

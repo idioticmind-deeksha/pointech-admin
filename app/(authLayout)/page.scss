@@ -1,0 +1,25 @@
+@use "../assets/theme/_var.scss" as *;
+.auth-layout {
+  
+flex: 1 1 auto;
+}
+
+.login_page {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  flex-direction: column;
+  @media(max-width:579px){
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+&_logo {
+  margin-bottom: 2rem;
+  max-width: 17rem;
+}
+}

@@ -1,0 +1,78 @@
+@use "../../assets/theme/_var.scss" as *;
+
+// .overlayloader {
+//   width: 100%;
+//   position: fixed;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   text-align: center;
+//   z-index: 9991;
+//   height: 100%;
+//   backdrop-filter: blur(5px);
+//   background-color: rgba($black, 0.15);
+
+//   &__inner {
+//     margin-right: -5.5rem;
+//   }
+// }
+@keyframes loading {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100%, 0);
+  }
+  50% {
+    transform: translate(100%, 100%);
+  }
+  75% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.loader {
+  &_handle {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    filter: blur(0.5rem) contrast(10);
+    &::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      background-color: rgba($black, 0.95);
+      backdrop-filter: blur(0.5rem);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  & {
+    padding: 1rem;
+    box-sizing: border-box;
+    display: grid;
+  }
+  &::before,
+  &:after {
+    content: "";
+    grid-area: 1/1;
+    width: 4rem;
+    height: 4rem;
+    background: $primaryclr;
+    animation: loading 2s infinite;
+  }
+  &:after {
+    animation-delay: -1s;
+  }
+}

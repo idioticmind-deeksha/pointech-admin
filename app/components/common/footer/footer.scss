@@ -1,0 +1,40 @@
+@use '../../../assets/theme/_var.scss' as *;
+
+.footer {
+    & {
+        margin-top: auto;
+        background-image: url(/images/footer-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        // padding-top: 4.5rem;
+        p {
+            max-width: 91.4rem;
+            margin: 0 auto;
+        }
+    }
+
+    &_logo {
+        margin-bottom: 2.8rem;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            margin: 2rem .75rem 0;
+        }
+    }
+
+    &_copyright {
+        // margin-top: 4rem;
+        border-top: .1rem solid rgba($white, .2);
+        padding: 2rem 0 2.5rem;
+
+        p {
+            margin: 0 auto;
+        }
+    }
+}

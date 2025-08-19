@@ -1,0 +1,40 @@
+@use '../../../assets/theme/_var.scss' as *;
+.common_search {
+    position: relative;
+    input {
+        height: 5rem;
+        border-radius: 1.2rem;
+        border: .2rem solid $borderclr2;
+        background-color: rgba(39, 43, 64, 0.20);
+        padding: .5rem 5.6rem .5rem 1.6rem;
+        color: $white;
+        font-size: 1.6rem;
+        width: 100%;
+        &[type="search"]::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        &::placeholder {
+            color: rgba($white, .2);
+            caret-color: rgba($white, .2);
+            opacity: 1;
+        }
+        &:-moz-placeholder {
+            color: rgba($white, .2);
+            caret-color: rgba($white, .2);
+            caret-color: $textclr;
+        }
+        &::-webkit-input-placeholder {
+            color: rgba($white, .2);
+            caret-color: rgba($white, .2);
+            caret-color: $textclr;
+        }
+    }
+    button {
+        position: absolute;
+        right: 1.3rem;
+        transform: translateY(-50%);
+        top: 50%;
+        z-index: 1;
+    }
+}

@@ -1,0 +1,66 @@
+@use "../../../assets/theme/_var.scss" as *;
+
+.alertmodal {
+    &.modal {
+        .modal {
+            &-dialog {
+                max-width: 44.1rem;
+                text-align: center;
+
+                svg {
+                    margin-bottom: 2rem;
+
+                    @media (max-width:575px) {
+                        margin-bottom: 1rem;
+                    }
+                }
+                h5 {
+                    max-width: 26rem;
+                    margin: 0 auto;
+                }
+                p {
+                    margin-top: 2rem;
+                    font-size: 1.5rem;
+                    color: $lightgray;
+
+                    @media (max-width:575px) {
+                        margin-top: 1rem;
+                    }
+                }
+
+                .form-control {
+                    padding: 2rem;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    border: 0.1rem solid $borderclr;
+                    border-radius: 1.6rem;
+                    height: 8rem;
+                    resize: none;
+                    margin-top: 3rem;
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+
+                .common_btn {
+                    margin-top: 3rem;
+
+                    @media (max-width:575px) {
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    &.swap_alert {
+        .modal {
+            &-body {
+                img, svg, canvas {
+                    height: 20rem;
+                    width: 20rem;
+                }
+            }
+        }
+    }
+}
